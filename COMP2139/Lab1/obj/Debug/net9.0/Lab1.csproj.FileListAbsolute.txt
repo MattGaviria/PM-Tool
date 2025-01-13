@@ -95,3 +95,4 @@ C:\Users\cmatt\RiderProjects\COMP2139\Lab1\obj\Debug\net9.0\refint\Lab1.dll
 C:\Users\cmatt\RiderProjects\COMP2139\Lab1\obj\Debug\net9.0\Lab1.pdb
 C:\Users\cmatt\RiderProjects\COMP2139\Lab1\obj\Debug\net9.0\Lab1.genruntimeconfig.cache
 C:\Users\cmatt\RiderProjects\COMP2139\Lab1\obj\Debug\net9.0\ref\Lab1.dll
+C:\Users\cmatt\RiderProjects\COMP2139\Lab1\obj\Debug\net9.0\Lab1.sourcelink.json
