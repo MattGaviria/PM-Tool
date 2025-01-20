@@ -18,5 +18,26 @@ public class ProjectController : Controller
         };
         return View(projects);
     }
+
+    [HttpGet]
+    public IActionResult Create()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult Create(Project project)
+    {
+        //Persist new project to the database
+        return RedirectToAction("Index");
+    }
     
+    //CRUD CREATE - READ -UPDATE - DELETE
+
+    public IActionResult Details(int id)
+    {
+        // Retrive project form database
+        var project = new Project {ProjectId = id, Name = "Project 1", Description = " First Project" };
+        return View(project);
+    }
 }
