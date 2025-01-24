@@ -1,9 +1,27 @@
-﻿@model Project
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model Project
 
 @{
-    ViewBag.Title = "Project Details";
-    Layout = "_Layout";
+    ViewData["Title"] = "Project Details"; // sets the title of the view to "Project Details"
     
 }
 
 <h2>Project Details</h2>
+
+<div class="card">
+    
+    <div class="card-title">@Model.Name</div>
+    <div class="card-text">@Model.Description</div>
+    
+    <dl class="row">
+        <dt class="col-sm-3">Project Id</dt>
+        <dt class="col-sm-9">@Model.ProjectId</dt>
+        
+        <!-- add more properties here -->
+        
+    </dl>
+    
+    <a asp-controller="Project" asp-action="Edit" asp-route-id="@Model.ProjectId" class ="btn btn-primary">Edit</a>
+    <a asp-controller="Project" asp-action="Index" class="btn btn-secondary">Back to Project List</a>
+    
+</div>
