@@ -1,8 +1,41 @@
-﻿@model TModel
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model Project
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Edit Project";
     Layout = "_Layout";
 }
 
-<h2>title</h2>
+<h2>Create Project</h2>
+
+<form asp-action="Edit" method="post">
+    
+    <!-- hidden field to ensure the PorjectId is included in the form submission -->
+    @Html.HiddenFor(model =>model.ProjectId)
+    
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class-="form-control"/>
+        <span asp-validation-for="Name" class="text-danger"></span>
+      
+    </div>
+   
+    <div class="form-group">
+        <label asp-for="Description" class="control-label"></label>
+        <textarea asp-for="Description" class-="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+   
+    <!----- Include other form fields here --->
+   
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary">
+    </div>
+   
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

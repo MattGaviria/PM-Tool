@@ -7441,6 +7441,7 @@
       "packagesPath": "C:\\Users\\cmatt\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\obj\\",
       "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
@@ -7471,8 +7472,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "all"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+      }
     },
     "frameworks": {
       "net9.0": {
