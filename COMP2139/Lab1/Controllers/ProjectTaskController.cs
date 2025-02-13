@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Lab1.Controllers;
+[Route("ProjectTask")]
 
 public class ProjectTaskController : Controller
 {
@@ -142,6 +143,41 @@ public class ProjectTaskController : Controller
         }
 
         return View(task);
+    }
+
+    
+    [HttpGet("Search")]
+    public async Task<IActionResult> Search(int? projectId, string searchString)
+    {
+        var tasksQuery =_context.Tasks.AsQueryable();
+        
+        bool searchPerformed = !string.IsNullOrWhiteSpace(searchString);
+
+        if (projectId.HasValue)
+        {
+            tasksQuery = tasksQuery.Where(t => t.ProjectId == projectId);
+        }
+        
+
+        if (searchPerformed)
+        {
+            searchString = searchString.ToLower();
+            
+            tasksQuery = tasksQuery.Where(t => t.Title.ToLower().Contains(searchString) ||
+                                               t.Description.ToLower().Contains(searchString));
+            
+        }
+        
+        // Asynchronus execution means this method does not block the thread while waiting for the database 
+        var projects = await tasksQuery.ToListAsync();
+        
+        //Pass search metedata
+        ViewBag.ProjectId = projectId;
+        ViewData["SearchString"] = searchString;
+        ViewData["SearchPerformed"] = searchPerformed;
+        
+        
+        return View("Index", projects);
     }
 
 

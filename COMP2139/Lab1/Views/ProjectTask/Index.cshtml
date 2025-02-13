@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ProjectTask>
+
+@{
+    ViewData["Title"] = "Task List";
+    Layout = "_Layout";
+    
+    bool searchPerformed = ViewData["SearchPerformed"] as bool? ?? false;
+    string searchString = ViewData["SearchString"] as string;
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Task ID</th>
+            <th>Tittle</th>
+            <th>Descriptions</th>
+            <th>Project Id</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        @foreach (var task in Model)
+        {
+            <tr>
+                <td>@task.ProjectId </td>
+                <td>@task.Title </td>
+                <td>@task.Description</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@task.ProjectId" class="btn btn-info">Details</a>
+                    <a asp-action="Edit" asp-route-id="@task.ProjectId" class="btn btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@task.ProjectId" class="btn btn-danger">Delete</a>
+
+                </td>
+                <!-- Any other project fields -->
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+else 
+{  if (searchPerformed)
+    {
+        <p> No project with string "@searchString" were found</p>   
+    }
+    else
+    {
+        <p>No projects available</p>
+        
+    }
+    <a asp-action="Create" asp-route-projectId="@ViewBag.ProjectId" class="btn btn-success">Create New Task</a>
+
+    <a asp-controller="Project" asp-action="Index" class="btn btn-primary">Back to Projects</a>
+
+}

@@ -16,7 +16,11 @@ public class ApplicationDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         //define one-to-many relationship 
-        
+        modelBuilder.Entity<Project>()
+            .HasMany(p => p.Tasks)        // one project has (potentioally) many tasks
+            .WithOne(t => t.Project)            // Each ProjectTask belongs to one Project
+            .HasForeignKey(t => t.ProjectId)  // Foreign key in projectTask table
+            .OnDelete(DeleteBehavior.Cascade);          // Cascade Delete ProjectTask when a Project is deleted 
         //seeding the database
         modelBuilder.Entity<Project>().HasData(
             new Project {ProjectId = 1, Name = "Project 5", Description = "Project 5 description"},

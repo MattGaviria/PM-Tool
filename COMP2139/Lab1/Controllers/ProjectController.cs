@@ -147,5 +147,32 @@ public class ProjectController : Controller
 
         return NotFound();
     }
+
+    [HttpGet("Search/{searchString}")]
+    public async Task<IActionResult> Search(string searchString)
+    {
+        var projectsQuery =_context.Projects.AsQueryable();
+        
+        bool searchPerformed = !string.IsNullOrWhiteSpace(searchString);
+
+        if (searchPerformed)
+        {
+            searchString = searchString.ToLower();
+            
+            projectsQuery = projectsQuery.Where(p => p.Name.ToLower().Contains(searchString) ||
+                                                     p.Description.ToLower().Contains(searchString));
+            
+        }
+        
+        // Asynchronus execution means this method does not block the thread while waiting for the database 
+        var projects = await projectsQuery.ToListAsync();
+        
+        //Pass search metedata
+        ViewData["SearchString"] = searchString;
+        ViewData["SearchPerformed"] = searchPerformed;
+        
+        
+        return View("Index", projects);
+    }
     
 }
