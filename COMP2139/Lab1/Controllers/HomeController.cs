@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Lab1.Areas.ProjectManagement.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Lab1.Models;
 
@@ -32,14 +33,25 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult GeneralSearch(string searchType, string searchString)
     {
+        searchType = searchType?.Trim().ToLower();
+        
+        searchString = searchString?.Trim().ToLower();
+
+        if (string.IsNullOrEmpty(searchType) || string.IsNullOrEmpty(searchString))
+        {
+            return RedirectToAction(nameof(Index));
+            
+        }
+        
         if (searchType == "projects")
         {
-            return RedirectToAction(nameof(ProjectController.Search), "Project", new { searchString = searchString });
+            return RedirectToAction(nameof(ProjectController.Search), "Project", new { searchString});
         }
+        
 
-        if (searchType == "tasks")
+        else if (searchType == "tasks")
         {
-            return RedirectToAction(nameof(ProjectTaskController.Search), "ProjectTask", new { searchString = searchString });
+            return RedirectToAction(nameof(ProjectTaskController.Search), "ProjectTask", new { searchString });
         }
         
         return RedirectToAction(nameof(Index),"Home");

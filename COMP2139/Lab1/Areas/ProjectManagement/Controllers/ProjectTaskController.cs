@@ -1,9 +1,12 @@
-﻿using Lab1.Data;
-using Lab1.Models;
+﻿using Lab1.Areas.ProjectManagement.Models;
+using Lab1.Data;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Lab1.Controllers;
+namespace Lab1.Areas.ProjectManagement.Controllers;
+
+[Area("ProjectManagement")]
 [Route("ProjectTask")]
 
 public class ProjectTaskController : Controller
@@ -16,7 +19,7 @@ public class ProjectTaskController : Controller
 
     }
 
-    [HttpGet]
+    [HttpGet("Index/{projectId:int}")]
 
     public IActionResult Index(int projectId)
     {
@@ -29,7 +32,7 @@ public class ProjectTaskController : Controller
         return View(tasks);
     }
 
-    [HttpGet]
+    [HttpGet("Details/{id:int}")]
     public IActionResult Details(int id)
     {
         var task = _context.Tasks
@@ -44,7 +47,7 @@ public class ProjectTaskController : Controller
         return View(task);
     }
 
-    [HttpGet]
+    [HttpGet("Create/{projectId:int}")]
     public IActionResult Create(int projectId)
     {
         var project = _context.Projects.Find(projectId);
@@ -63,7 +66,7 @@ public class ProjectTaskController : Controller
         return View();
     }
 
-    [HttpPost]
+    [HttpPost("Create/{projectId:int}")]
     [ValidateAntiForgeryToken]
     public IActionResult Create([Bind("Title", "Description", "ProjectId")] ProjectTask task)
     {
@@ -79,7 +82,7 @@ public class ProjectTaskController : Controller
 
     }
 
-    [HttpGet]
+    [HttpGet("Edit/{id:int}")]
     public IActionResult Edit(int id)
     {
         var task = _context
@@ -96,7 +99,7 @@ public class ProjectTaskController : Controller
 
     }
 
-    [HttpPost]
+    [HttpPost("Edit/{id:int}")]
     [ValidateAntiForgeryToken]
     public IActionResult Edit(int id, [Bind("ProjectTaskId", "Title", "Description", "ProjectId")] ProjectTask task)
     {
@@ -115,7 +118,7 @@ public class ProjectTaskController : Controller
         return View(task);
     }
 
-    [HttpGet]
+    [HttpGet("Delete/{id:int}")]
     public IActionResult Delete(int id)
     {
         var task = _context
@@ -130,7 +133,7 @@ public class ProjectTaskController : Controller
         return View(task);
     }
 
-    [HttpPost, ActionName("Delete")]
+    [HttpPost("Delete/{projectTaskId}"), ActionName("Delete")]
     [ValidateAntiForgeryToken]
     public IActionResult DeleteConfirmed(int projectTaskId)
     {

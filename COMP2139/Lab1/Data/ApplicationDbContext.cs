@@ -1,4 +1,5 @@
-﻿using Lab1.Models;
+﻿using Lab1.Areas.ProjectManagement.Models;
+using Lab1.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Lab1.Data;

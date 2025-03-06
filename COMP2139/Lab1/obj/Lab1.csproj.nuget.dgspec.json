@@ -13,6 +13,7 @@
         "packagesPath": "C:\\Users\\cmatt\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "C:\\Users\\cmatt\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
@@ -37,8 +38,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net9.0": {

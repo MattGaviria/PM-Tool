@@ -1,14 +1,21 @@
 ﻿using System.ComponentModel.DataAnnotations;
-namespace Lab1.Models;
+
+
+namespace Lab1.Areas.ProjectManagement.Models;
 
 public class ProjectTask
 {
     [Key]
     public int ProjectTaskId { get; set; }
     
+    
+    [Display(Name = "Task Title")]
+    [StringLength(100, ErrorMessage = "Project name cannot be longer than 100 characters.")]
     [Required]
     public required string Title {get; set;}
     
+    [Display(Name = "Task Description")]
+    [StringLength(500, ErrorMessage = "Task Description cannot be longer than 500 characters.")]
     [Required]
     public required string Description {get; set;}
     
