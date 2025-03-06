@@ -10,7 +10,7 @@ public class ProjectTask
     
     
     [Display(Name = "Task Title")]
-    [StringLength(100, ErrorMessage = "Project name cannot be longer than 100 characters.")]
+    [StringLength(100, ErrorMessage = "Task Title cannot be longer than 100 characters.")]
     [Required]
     public required string Title {get; set;}
     
@@ -20,6 +20,7 @@ public class ProjectTask
     public required string Description {get; set;}
     
     // Foreign Key
+    [Display(Name = "Parent Project ID")]
     public int ProjectId { get; set; }
     
     //Navigation Property
