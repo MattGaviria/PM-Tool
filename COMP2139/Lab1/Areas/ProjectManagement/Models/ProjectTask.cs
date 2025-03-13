@@ -27,5 +27,6 @@ public class ProjectTask
     // This property allows for easy access to the related Project entity from the ProjectTask entity
     public Project? Project { get; set; }
     
+   
     
 }

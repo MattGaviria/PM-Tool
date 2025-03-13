@@ -45,13 +45,13 @@ public class HomeController : Controller
         
         if (searchType == "projects")
         {
-            return RedirectToAction(nameof(ProjectController.Search), "Project", new { searchString});
+            return RedirectToAction(nameof(ProjectController.Search), "Project", new { area="ProjectManagement", searchString});
         }
         
 
         else if (searchType == "tasks")
         {
-            return RedirectToAction(nameof(ProjectTaskController.Search), "ProjectTask", new { searchString });
+            return RedirectToAction(nameof(ProjectTaskController.Search), "ProjectTask", new { area="ProjectManagement", searchString });
         }
         
         return RedirectToAction(nameof(Index),"Home");
