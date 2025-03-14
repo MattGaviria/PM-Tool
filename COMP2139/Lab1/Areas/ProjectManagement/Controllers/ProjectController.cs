@@ -47,6 +47,9 @@ public class ProjectController : Controller
         //Persist new project to the database
         if (ModelState.IsValid)
         {
+            project.StartDate = DateTime.SpecifyKind(project.StartDate, DateTimeKind.Utc);
+            project.EndDate = DateTime.SpecifyKind(project.EndDate, DateTimeKind.Utc);
+            
             _context.Projects.Add(project); // add new project to database
             await _context.SaveChangesAsync(); //persists the changes to database
             return RedirectToAction("Index");
