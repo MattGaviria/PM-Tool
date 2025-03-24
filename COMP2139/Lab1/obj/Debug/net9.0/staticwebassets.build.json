@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/2GZv6u4cAiLZgksh4ExRzFgw5mwDbgG1SLo+s9oTVE=",
+  "Hash": "8uRnMI91dDVZBib2t9gxas0xWgOSHUfMFlVm2XejpBE=",
   "Source": "Lab1",
   "BasePath": "_content/Lab1",
   "Mode": "Default",
@@ -1214,6 +1214,27 @@
       "OriginalItemSpec": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
+      "Identity": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\obj\\Debug\\net9.0\\compressed\\vur06rr287-xkdh8daq0o.gz",
+      "SourceId": "Lab1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Lab1",
+      "RelativePath": "js/projectComments#[.{fingerprint=xkdh8daq0o}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\wwwroot\\js\\projectComments.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "t2id6vp09u",
+      "Integrity": "OzH5sIA19py/n1k9er72MZzNvPUwA5zCrwOZ1cFFL5I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\wwwroot\\js\\projectComments.js"
+    },
+    {
       "Identity": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\obj\\Debug\\net9.0\\compressed\\w0ftk6cj11-jd9uben2k1.gz",
       "SourceId": "Lab1",
       "SourceType": "Discovered",
@@ -1443,6 +1464,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\wwwroot\\js\\projectComments.js",
+      "SourceId": "Lab1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\wwwroot\\",
+      "BasePath": "_content/Lab1",
+      "RelativePath": "js/projectComments#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xkdh8daq0o",
+      "Integrity": "AdtMUs8Zy5Mz+qjCHX37PIJeLqsFPJ6JT61zbr2xqEA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\projectComments.js"
     },
     {
       "Identity": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\wwwroot\\js\\site.js",
@@ -3320,6 +3362,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0="
+        }
+      ]
+    },
+    {
+      "Route": "js/projectComments.js",
+      "AssetFile": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\obj\\Debug\\net9.0\\compressed\\vur06rr287-xkdh8daq0o.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001466275660"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "681"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OzH5sIA19py/n1k9er72MZzNvPUwA5zCrwOZ1cFFL5I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:41:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"AdtMUs8Zy5Mz+qjCHX37PIJeLqsFPJ6JT61zbr2xqEA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AdtMUs8Zy5Mz+qjCHX37PIJeLqsFPJ6JT61zbr2xqEA="
+        }
+      ]
+    },
+    {
+      "Route": "js/projectComments.js",
+      "AssetFile": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\wwwroot\\js\\projectComments.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1887"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AdtMUs8Zy5Mz+qjCHX37PIJeLqsFPJ6JT61zbr2xqEA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:41:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AdtMUs8Zy5Mz+qjCHX37PIJeLqsFPJ6JT61zbr2xqEA="
+        }
+      ]
+    },
+    {
+      "Route": "js/projectComments.js.gz",
+      "AssetFile": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\obj\\Debug\\net9.0\\compressed\\vur06rr287-xkdh8daq0o.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "681"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OzH5sIA19py/n1k9er72MZzNvPUwA5zCrwOZ1cFFL5I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:41:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OzH5sIA19py/n1k9er72MZzNvPUwA5zCrwOZ1cFFL5I="
+        }
+      ]
+    },
+    {
+      "Route": "js/projectComments.xkdh8daq0o.js",
+      "AssetFile": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\obj\\Debug\\net9.0\\compressed\\vur06rr287-xkdh8daq0o.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001466275660"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "681"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OzH5sIA19py/n1k9er72MZzNvPUwA5zCrwOZ1cFFL5I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:41:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"AdtMUs8Zy5Mz+qjCHX37PIJeLqsFPJ6JT61zbr2xqEA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xkdh8daq0o"
+        },
+        {
+          "Name": "label",
+          "Value": "js/projectComments.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AdtMUs8Zy5Mz+qjCHX37PIJeLqsFPJ6JT61zbr2xqEA="
+        }
+      ]
+    },
+    {
+      "Route": "js/projectComments.xkdh8daq0o.js",
+      "AssetFile": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\wwwroot\\js\\projectComments.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1887"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AdtMUs8Zy5Mz+qjCHX37PIJeLqsFPJ6JT61zbr2xqEA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:41:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xkdh8daq0o"
+        },
+        {
+          "Name": "label",
+          "Value": "js/projectComments.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AdtMUs8Zy5Mz+qjCHX37PIJeLqsFPJ6JT61zbr2xqEA="
+        }
+      ]
+    },
+    {
+      "Route": "js/projectComments.xkdh8daq0o.js.gz",
+      "AssetFile": "C:\\Users\\cmatt\\RiderProjects\\COMP2139\\Lab1\\obj\\Debug\\net9.0\\compressed\\vur06rr287-xkdh8daq0o.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "681"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OzH5sIA19py/n1k9er72MZzNvPUwA5zCrwOZ1cFFL5I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:41:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xkdh8daq0o"
+        },
+        {
+          "Name": "label",
+          "Value": "js/projectComments.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OzH5sIA19py/n1k9er72MZzNvPUwA5zCrwOZ1cFFL5I="
         }
       ]
     },
