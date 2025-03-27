@@ -1,10 +1,11 @@
 ﻿using Lab1.Areas.ProjectManagement.Models;
 using Lab1.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Lab1.Data;
 
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext : IdentityDbContext
 {
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
@@ -19,6 +20,9 @@ public class ApplicationDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        //Ensure Identity Configurations and Table are created 
+        base.OnModelCreating(modelBuilder);
+        
         //define one-to-many relationship 
         modelBuilder.Entity<Project>()
             .HasMany(p => p.Tasks)        // one project has (potentioally) many tasks

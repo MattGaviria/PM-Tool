@@ -16,23 +16,28 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        _logger.LogInformation("Accessed HomeController Index at {Time}", DateTime.Now);
         return View();
     }
-
+    
+  
     public IActionResult About()
     {
+        _logger.LogInformation("Accessed HomeController About at {Time}", DateTime.Now);
         return View();
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
+        _logger.LogError("Accessed HomeController Error at {Time}", DateTime.Now);
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 
     [HttpGet]
     public IActionResult GeneralSearch(string searchType, string searchString)
     {
+        _logger.LogInformation("Accessed HomeController GeneralSearch at {Time}", DateTime.Now);
         searchType = searchType?.Trim().ToLower();
         
         searchString = searchString?.Trim().ToLower();
@@ -56,5 +61,16 @@ public class HomeController : Controller
         
         return RedirectToAction(nameof(Index),"Home");
         
+    }
+
+    [HttpGet]
+    public IActionResult NotFound(int statusCode)
+    {
+        _logger.LogWarning("NotFound invoked at {Time}", DateTime.Now);
+        if (statusCode == 404)
+        {
+            return View("NotFound");
+        }
+        return View(Error);
     }
 }

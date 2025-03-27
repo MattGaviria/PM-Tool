@@ -1,15 +1,54 @@
 using Lab1.Data;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-
 //add the context tp tje service collection with a connection string
 builder.Services.AddDbContext<ApplicationDbContext>( options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
+
+
+//Can Also be configured on appsettings.jason
+/*
+"Serilog" : {
+    "MinimumLevel": {
+        "Default": "Debug",
+        "Override" : {
+            "Microsoft": "Warning",
+            "System": "Warning"
+        }
+    },
+    
+    "WriteTo": [
+    {"Name" :  "Console"},
+    {
+        "Name:" : "File",
+        "Args" : {
+            "path" : "Logs/log-.txt",
+            "rollingInterval" : "Day"
+        }
+    }
+    ],
+    "Enrich" : ["FromLogContext"]
+}
+*/
+
+
+
+//Logging level: Verbose, debug, information, warning, Error, fatal  
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .WriteTo.Console()
+    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
+    .Enrich.FromLogContext()
+    .CreateLogger();
 
 var app = builder.Build();
 

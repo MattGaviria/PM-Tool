@@ -1,8 +1,10 @@
 ﻿using Lab1.Areas.ProjectManagement.Models;
+using Lab1.Controllers;
 using Lab1.Data;
 using Lab1.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace Lab1.Areas.ProjectManagement.Controllers;
 
@@ -10,10 +12,12 @@ namespace Lab1.Areas.ProjectManagement.Controllers;
 [Route("[area]/[controller]/[action]")]
 public class ProjectController : Controller
 {
+    private readonly ILogger<ProjectController> _logger;
     private readonly ApplicationDbContext _context;
 
-    public ProjectController(ApplicationDbContext context)
+    public ProjectController(ApplicationDbContext context, ILogger<ProjectController> logger)
     {
+        _logger = logger;
         _context = context;
     }
     /// <summary>
@@ -23,6 +27,7 @@ public class ProjectController : Controller
     [HttpGet("")]
     public async Task<IActionResult> Index()
     {
+        _logger.LogInformation("Accessed ProjectController Index at {Time}", DateTime.Now);
         // Retrieve all projects from the database
         var projects=await _context.Projects.ToListAsync();
         return View(projects);
@@ -37,6 +42,7 @@ public class ProjectController : Controller
     [HttpGet("Create")]
     public IActionResult Create()
     {
+        _logger.LogInformation("Accessed ProjectController Create at {Time}", DateTime.Now);
         return View();
     }
 
@@ -63,10 +69,12 @@ public class ProjectController : Controller
     [HttpGet("Details/{id:int}")]
     public async Task<IActionResult> Details(int id)
     {
+        _logger.LogInformation("Accessed ProjectController Details at {Time}", DateTime.Now);
         // retrieves the project with the specified id or returns null if not found
         var project = await _context.Projects.FirstOrDefaultAsync(p => p.ProjectId == id);
         if (project == null)
         {
+            _logger.LogWarning("Could not find the Project with id of {id}", id);
             return NotFound();
             
         }
