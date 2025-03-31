@@ -423,3 +423,5 @@ C:\Users\cmatt\RiderProjects\COMP2139\Lab1\obj\Debug\net9.0\compressed\a3ygkwa5z
 C:\Users\cmatt\RiderProjects\COMP2139\Lab1\obj\Debug\net9.0\compressed\nezrqnk58p-muycvpuwrr.gz
 C:\Users\cmatt\RiderProjects\COMP2139\Lab1\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
 C:\Users\cmatt\RiderProjects\COMP2139\Lab1\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
+C:\Users\cmatt\RiderProjects\COMP2139\Lab1\bin\Debug\net9.0\SendGrid.dll
+C:\Users\cmatt\RiderProjects\COMP2139\Lab1\bin\Debug\net9.0\StarkbankEcdsa.dll
