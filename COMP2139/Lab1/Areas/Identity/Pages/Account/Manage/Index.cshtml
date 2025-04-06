@@ -1,9 +1,11 @@
 ﻿@page
 @model IndexModel
 @{
+    Layout = "/Views/Shared/_Layout.cshtml"; // 👈 Add this line!
     ViewData["Title"] = "Profile";
     ViewData["ActivePage"] = ManageNavPages.Index;
 }
+
 
 <h3>@ViewData["Title"]</h3>
 <partial name="_StatusMessage" for="StatusMessage" />
