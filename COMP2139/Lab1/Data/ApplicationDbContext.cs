@@ -34,14 +34,14 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             .OnDelete(DeleteBehavior.Cascade);          // Cascade Delete ProjectTask when a Project is deleted 
         //seeding the database
         modelBuilder.Entity<Project>().HasData(
-            new Project {ProjectId = 1, Name = "Project 5", Description = "Project 5 description"},
-            new Project {ProjectId = 2, Name = "Project 6", Description = "Project 6 description"},
-            new Project {ProjectId = 3, Name = "Project 7", Description = "Project 7 description"},
-            new Project {ProjectId = 4, Name = "Project 8", Description = "Project 8 description"},
-            new Project {ProjectId = 5, Name = "Project 9", Description = "Project 9 description"},
-            new Project {ProjectId = 6, Name = "Project 10", Description = "Project 10 description"},
-            new Project {ProjectId = 7, Name = "Project 11", Description = "Project 11 description"},
-            new Project {ProjectId = 8, Name = "Project 12", Description = "Project 12 description"}
+            new Project {ProjectId = 1, Name = "Idea Numero 1", Description = "Draft for school"},
+            new Project {ProjectId = 2, Name = "Warehouse Company", Description = "Draft for school"},
+            new Project {ProjectId = 3, Name = "Zeal Burguers", Description = "Draft for school"},
+            new Project {ProjectId = 4, Name = "Contratos Mama", Description = "Draft for school"},
+            new Project {ProjectId = 5, Name = "OEmpresa de golosinas", Description = "Draft for school"},
+            new Project {ProjectId = 6, Name = "Cocacola", Description = "Draft for school"},
+            new Project {ProjectId = 7, Name = "Fortnite", Description = "Draft for school"},
+            new Project {ProjectId = 8, Name = "Pokemon", Description = "Draft for school"}
         );
 
         modelBuilder.Entity<ApplicationUser>(entity =>
